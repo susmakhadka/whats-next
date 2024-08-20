@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Next</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .suggestion {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>What's Next?</h1>
+    <button onclick="showNextSuggestion()">What's Next</button>
+    <div class="suggestion" id="suggestion"></div>
+
+    <script>
+        const suggestions = [
+            "Reflect on how this subtask connects to the larger project goal.",
+            "Visualize completing the next task successfully.",
+            "Stand up and do a quick stretch, then immediately sit back down to start the next task.",
+            "Walk to get a glass of water, then return and start the next task right away."
+        ];
+
+        function showNextSuggestion() {
+            const randomIndex = Math.floor(Math.random() * suggestions.length);
+            document.getElementById("suggestion").innerText = suggestions[randomIndex];
+        }
+    </script>
+</body>
+</html>
